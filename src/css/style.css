@@ -1,0 +1,485 @@
+/*===================================*/
+/*===============GLOBAL==============*/
+/*===================================*/
+
+
+
+html { scroll-behavior: smooth;}
+
+body {
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/*===================================*/
+/*===============HEADER==============*/
+/*===================================*/
+
+
+header {
+    box-shadow: 0px 5px 5px var(--dark);
+    border-bottom: solid var(--dark) 2px;
+    top: 0;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 0 25px 0;
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    background-color: var(--light);   
+}
+
+
+
+
+
+
+header img { width: 150px; }
+
+
+header ul { 
+    padding: 0; 
+    margin: 20px 0 0 0px;
+}
+
+
+header li {
+    display: block;
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    font-size: 1.3em;
+}
+
+
+nav ul li a:hover {
+    background-color: var(--red);
+    color: var(--light);
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+
+
+
+
+.active { 
+    text-decoration: none;
+    color: var(--light);
+    padding: 5px 10px;
+    background-color: var(--blue);
+    text-transform: uppercase; 
+}
+
+/*===================================*/
+/*================HERO==============*/
+/*===================================*/
+
+section#hero {
+    background-image: url(../images/background2-desktop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    z-index: 0;   
+}
+
+
+
+
+/*===================================*/
+/*===============APROPOS=============*/
+/*===================================*/
+
+
+#apropos {
+    text-align: center;
+    padding: 30px 40px;
+    margin: 50px;
+}
+
+
+.apropos-flex  {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+#apropos h1 { font-size: 2.8em;}
+
+
+#apropos h2 { color: var(--red);}
+
+
+
+
+/*===================================*/
+/*============TELECHARGER============*/
+/*===================================*/
+
+#telecharger {
+    background-image: url(../images/background.jpg);
+    padding: 50px 50px;
+    text-align: center;
+}
+
+
+#telecharger h1 {
+    margin: 0 0 50px 0;
+    color: var(--light);
+    font-size: 2.4em; 
+}
+
+.telecharger-images {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+
+
+
+#telecharger img { width: 200px;}
+
+#telecharger a.img-apple { transition: all;}
+
+
+#telecharger a.img-google {
+    transition: all;
+    padding-top: 2px;
+}
+
+
+#telecharger a:active {
+    transform: scale(0.9);
+    transition: ease;
+}
+
+
+
+
+
+/*===================================*/
+/*==============GAMEPLAY=============*/
+/*===================================*/
+
+
+
+#gameplay { padding: 60px 20px;}
+
+
+.gameplay-text h1 {
+    text-align: center;
+    font-size: 2.4em;
+}
+
+
+#gameplay img { width: 100%;}
+
+
+
+
+/*===================================*/
+/*==============BRAWLERS=============*/
+/*===================================*/
+
+#brawlers-liste span {
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+#brawlers-liste span.tag-active {
+    opacity: 1;
+}
+
+
+
+
+
+
+progress[value="1"] { color: var(--red); }
+progress[value="2"] { color: var(--yellow); }
+progress[value="3"] { color: var(--green); }
+
+progress[value="1"]::-webkit-progress-value,
+progress[value="1"]::-moz-progress-bar { background: var(--red); }
+
+progress[value="2"]::-webkit-progress-value,
+progress[value="2"]::-moz-progress-bar { background: var(--yellow); }
+
+progress[value="3"]::-webkit-progress-value,
+progress[value="3"]::-moz-progress-bar { background: var(--green); }
+
+
+
+#brawlers {
+    text-align: center;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+#brawlers p, #brawlers h2, #brawlers i { color: var(--light);}
+
+.brawlers-zoom {
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+}
+
+
+
+.brawlers-zoom-infos p { display: inline; }
+
+
+
+.brawlers-zoom progress{
+    display: block;
+    width: 100%;
+    background-color: var(--green);
+    margin-bottom: 10px;
+}
+
+
+
+#brawlers-zoom-image { width: 100%; }
+
+.brawlers-zoom-infos { text-align: left;}
+
+#brawlers-liste { padding: 60px 20px 20px 20px;}
+
+
+
+.tag {
+    padding: 10px;
+    color: var(--light);
+    background-color: var(--blue);
+    border-radius: 8px;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+}
+
+
+.tag-hidden {
+    display: none;
+}
+
+
+
+.tag-red { background-color: var(--red);}
+
+
+
+
+
+
+.brawlers-items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 20px;
+    margin-bottom: 50px;
+
+}
+
+.brawlers-items-grid img {
+    width: 100%;
+    filter: grayscale(80%);
+}
+
+.brawlers-items-grid img:hover {
+   
+    filter: grayscale(0);
+}
+
+
+
+.brawlers-items-grid img.brawler-active {
+    border: 3px solid var(--red);
+    filter: grayscale(0) !important;  
+}
+
+
+
+
+
+/*===================================*/
+/*================FOOTER=============*/
+/*===================================*/
+
+
+
+
+footer {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+    color: var(--light);
+}
+
+
+footer a {
+    text-decoration: none;
+    color: var(--light);
+}
+
+
+
+
+
+
+
+
+
+/*===================================*/
+/*===========MEDIA QUERIES===========*/
+/*===================================*/
+
+
+
+
+@media screen and (min-width: 940px) {
+
+    header li { display: inline;}
+
+    .apropos-flex {
+        flex-direction: row;
+        
+    }
+
+
+    #telecharger {
+        height: 200px;
+        padding: 0 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        align-items: center;
+        justify-items: center;
+         }
+
+
+        .telecharger-images {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        text-align: center;
+        grid-column: span 2;
+        }
+        
+        #telecharger h1 {
+            grid-column: span 2;
+            margin: 0   
+        }
+
+
+        #gameplay {
+            padding: 60px 100px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+       
+
+        #brawlers {
+           flex-direction: row;
+           padding: 0 100px;
+           gap: 50px;   
+        }
+
+
+        .brawlers-zoom {
+            flex-basis: 25%;
+            margin-top: 50px;
+        }
+        
+        .brawlers-main-items {
+            padding: 0;
+            flex-basis: 75%;   
+        }
+
+        .brawlers-items-grid {
+            grid-template-columns: repeat(5, 1fr);
+            gap: 13px;
+            padding: 0;
+        }
+    
+}
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 940px) {
+
+    header li { display: inline; }
+         
+   
+
+    .apropos-flex  {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 30px 50px;
+
+    }
+
+
+
+
+    .brawlers-zoom, .brawlers-items-grid  { padding: 0 100px; }
+
+    .brawlers-items-grid { grid-template-columns: repeat(4, 1fr);}
+
+    #brawlers-liste { padding: 60px 100px 20px 100px; }
+
+
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 640px) and (max-width: 768px){
+
+    .brawlers-items-grid, .brawlers-zoom { padding: 0 100px; }
+    
+
+    .brawlers-items-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 0 100px; 
+    }
+
+        
+
+    #brawlers-liste { padding: 60px 100px 20px 100px; }
+    
+
+}

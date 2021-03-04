@@ -1,0 +1,304 @@
+
+      $("#brawler-thumbnails img").click(function() {
+        // Récupération du nom du brawler
+        let brawler = $(this).attr("alt");
+        // Liste des brawlers avec leurs statistiques
+        let brawlers = {
+          "Arkad": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "arkad2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 1
+          },
+          "Bartaba": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "bartaba2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 2
+          },
+          "Béa": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "bea2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 2
+          },
+          "Billie": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "billie2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 3
+          },
+          "Bo": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "bo2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 2
+          },
+          "Brock": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "brock2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 2
+          },
+          "Bull": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "bull2.png",
+            "health": 3,
+            "damages": 3,
+            "speed": 3
+          },
+          "Carl": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "carl2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 2
+          },
+          "Colt": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "colt2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 2
+          },
+          "Corbac": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "corbac2.png",
+            "health": 1,
+            "damages": 1,
+            "speed": 3
+          },
+          "Darryl": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "darryl2.png",
+            "health": 2,
+            "damages": 3,
+            "speed": 3
+          },
+          "Djinn": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "djinn2.png",
+            "health": 3,
+            "damages": 3,
+            "speed": 1
+          },
+          "Dynamike": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "dynamike2.png",
+            "health": 3,
+            "damages": 2,
+            "speed": 1
+          },
+          "El Costo": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "el-costo2.png",
+            "health": 2,
+            "damages": 3,
+            "speed": 2
+          },
+          "Eliza": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "eliza2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 1
+          },
+          "Emeri": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "emeri2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 2
+          },
+          "Frank": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "frank2.png",
+            "health": 3,
+            "damages": 1,
+            "speed": 1
+          },
+          "Jessie": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "jessie2.png",
+            "health": 1,
+            "damages": 2,
+            "speed": 2
+          },
+          "Leon": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "leon2.png",
+            "health": 2,
+            "damages": 3,
+            "speed": 3
+          },
+          "Mortis": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "mortis2.png",
+            "health": 3,
+            "damages": 1,
+            "speed": 3
+          },
+          "Nita": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "nita2.png",
+            "health": 1,
+            "damages": 2,
+            "speed": 3
+          },
+          "Pam": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "pam2.png",
+            "health": 2,
+            "damages": 3,
+            "speed": 2
+          },
+          "Penny": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "penny2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 1
+          },
+          "Poco": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "poco2.png",
+            "health": 2,
+            "damages": 1,
+            "speed": 1
+          },
+          "Polly": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "polly2.png",
+            "health": 1,
+            "damages": 3,
+            "speed": 2
+          },
+          "Ricochet": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "ricochet2.png",
+            "health": 1,
+            "damages": 2,
+            "speed": 2
+          },
+          "Rosa": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "rosa2.png",
+            "health": 1,
+            "damages": 1,
+            "speed": 3
+          },
+          "Shelly": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "shelly2.png",
+            "health": 2,
+            "damages": 2,
+            "speed": 2
+          },
+          "Spike": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "spike2.png",
+            "health": 3,
+            "damages": 3,
+            "speed": 1
+          },
+          "Tara": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "tara2.png",
+            "health": 3,
+            "damages": 1,
+            "speed": 2
+          },
+          "Tick": {
+            "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea odit quisquam totam obcaecati sed id illo.",
+            "image": "tick2.png",
+            "health": 2,
+            "damages": 3,
+            "speed": 1
+          }
+        }
+        // Mise à jour du brawler zoomé
+        $("#brawler-name").html(brawler);
+        $("#brawler-health progress").val(brawlers[brawler].health);
+        $("#brawler-damages progress").val(brawlers[brawler].damages);
+        $("#brawler-speed progress").val(brawlers[brawler].speed);
+        $("#brawler-description").html(brawlers[brawler].description);
+        $("#brawler-image").attr("src", "src/images/brawlers/" + brawlers[brawler].image);
+        $("#brawler-thumbnails img").removeClass("brawler-active");
+        $(this).addClass("brawler-active");
+      });
+
+      // Gestion du logo selon que l'on est en haut ou en bas de la page (scroll)
+      var navBig = true;
+      $(window).scroll(function() {
+        if($(window).scrollTop() > 0) {
+          if (navBig) {
+            navBig = false;
+            $("#logo").hide();
+          }
+        } else {
+          if (!navBig) {
+            navBig = true;
+            $("#logo").show();
+          }
+        }
+      });
+
+      // Gestion des filtres par tags
+      var activeFilters = new Array();
+      var all = true;
+      $(".tag").click(function() {
+        let rarity = $(this).attr('id');
+        let index = activeFilters.indexOf(rarity);
+        // CLIC sur "all"
+        if (rarity == "all") {
+          activeFilters = new Array();
+          // On désactive le filtre
+          if (all) {
+            filter();
+          // On active le filtre
+          } else {
+            noFilter();
+          }
+        // CLIC sur un autre filtre
+        } else {
+          if (index == -1) {
+            activeFilters.push(rarity); 
+            $(this).addClass("tag-active");
+          } else {
+            activeFilters.splice(index, 1);
+            $(this).removeClass("tag-active");
+          }
+          filter();
+        }
+      });
+
+      // Fonction qui affiche tous les éléments
+      function noFilter() {
+        all = true;  
+        $(".tag").removeClass("tag-active");
+        $("#all").addClass("tag-active");
+        $("#brawler-thumbnails img").show();
+      }
+
+      // Fonction qui gère les éléments à afficher selon les filtres
+      function filter() {
+        all = false;
+        $("#all").removeClass("tag-active");
+        $("#brawler-thumbnails img").hide();
+        activeFilters.forEach(function(rarity) {
+          $("."+rarity).show();
+        });
+      }
+
+      // Gestion des menu actifs
+      $("ul li a").click(function() {
+        $("ul li a").removeClass("nav-active");
+        $(this).addClass("nav-active");
+      });
+    

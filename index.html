@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="src/css/root.css">
+        <link rel="stylesheet" href="src/vendors/fontawesome-free-5.11.2/css/all.min.css">
+        <link rel="shortcut icon" href="src/images/favicon.png" type="image/x-icon">
+        <title>Brawl Stars</title>
+    </head>
+    <body>
+        <header>
+            <img id="logo" src="src/images/logo.png" alt="logo">
+            <nav>
+                <ul>
+                    <li><a class="active" href="#apropos">À propos</a></li>
+                    <li><a class="" href="#telecharger">Télécharger</a></li>
+                    <li><a class="" href="#gameplay">Gameplay</a></li>
+                    <li><a class="" href="#brawlers">Les brawlers</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <div class="container">
+
+            <section id="hero">
+            </section>
+
+            <section id="apropos">
+                <h1>BRAWL STARS C'EST...</h1>
+                <div class="apropos-flex">
+                    <div class="apropos-tournoi">
+                        <i class="fas fa-trophy fa-6x"></i>
+                        <h2>TOURNOIS</h2>
+                        <p>Participez à des tournois et tentez de remporter la première place</p>
+                    </div>
+                    <div class="apropos-fight">
+                        <i class="fas fa-bomb fa-6x"></i>
+                        <h2>FIIIGHT</h2>
+                        <p>Faites des combats épiques dans des arènes multijoueurs</p>
+                    </div>
+                    <div class="apropos-tournoi">
+                        <i class="fas fa-users fa-6x"></i>
+                        <h2>CLUBS</h2>
+                        <p>Rejoignez des clubs et combattez aux côtés de vos amis</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="telecharger">
+                <h1>Comme une envie de geeker ?</h1>
+                <div class="telecharger-images">
+                    <a href="https://apps.apple.com/fr/app/apple-store/id375380948" target="_blank" class="img-apple"><img src="src/images/download_apple.png" alt="logo apple"></a>
+                    <a href="https://play.google.com/store?gl=FR&utm_source=emea_Med&utm_medium=hasem&utm_content=Oct2020&utm_campaign=Evergreen&pcampaignid=MKT-EDR-emea-fr-1001280-Med-hasem-py-Evergreen-Oct2020-Text_Search_BKWS%7cONSEM_kwid_43700008792247580&gref=EkUKPQoJCIDq3oAGEMwBEiwA40hjLFINmLqwZB_y7LQy2V0AWNWdZFeG21n3d8oDHh3IkFxL2wAz0gEvfBoCBA8QAvD_BwEY4_bcmgM&gclid=Cj0KCQiA6t6ABhDMARIsAONIYyxSDZi6sGQf8uy0MtldAFjVnWRXhttZ93fKAx4dyJBcS9sAM9IBL3waAgQPEALw_wcB&gclsrc=aw.ds" target="_blank" class="img-google"><img src="src/images/download_google.png" alt="logo google"></a>
+                </div>
+            </section>
+
+            <section id="gameplay">
+                <div class="gameplay-image">
+                    <img src="src/images/game.jpg" alt="image téléphone">
+                </div>
+                <div class="gameplay-text">
+                    <h1>GAMEPLAY</h1>
+                    <p>Dans Brawl Stars, Supercell a mis le choix de son brawler, au coeur du gameplay de son jeu d'action multijoueurs. Les brawlers chromatiques sont très difficiles à obtenir hors Brawl Pass puisque leur taux d'obtention est égal à celui d'un brawler légendaire pendant les deux premiers mois de son apparition, puis à celui d'un brawler Mythique pendant les 2 mois qui suivent et enfin celui d'un brawler Épique pour le reste du temps.</p>
+                    <ul>
+                        <li>
+                            Ce n'est pas toujours facile de récupérer tous ces jetons. C'est pourquoi chaque boîte que vous ouvrez a une chance de contenir un nouveau brawler.</li>
+                        <li>Dès que vous atteignez le nombre de trophées requis, ces brawlers sont à vous pour toujours.</li>
+                        <li>
+                            Chaque saison du Pass Brawl garantit un brawler chromatique dans le fil du Pass Brawl. Vous pouvez le débloquer immédiatement après avoir atteint son palier.</li>
+                    </ul>
+
+                </div>
+            </section>
+
+            <section id="brawlers">
+                <div class="brawlers-zoom">
+                    <h2 id="brawler-zoom-nom">Arkad</h2>
+                    <p><img id="brawlers-zoom-image" src="src/images/brawlers/arkad2.png"></p>
+                    <p id="brawler-zoom-description">A.R.K.A.D. est un brawler commun, il se débloque dès que vous passez le cap relativement accessible des 6000 trophées. Ces 6000 trophées devraient être obtenus en quelques semaines de jeu tout au plus.</p>
+                    <div class="brawlers-zoom-infos">
+                        <div  class="brawlers-stat">
+                            <i class="fas fa-shield-alt"></i>
+                            <p>Santé</p>
+                            <progress id="sante" max="3" value="2"></progress>
+                        </div>
+                        <div class="brawlers-stat">
+                            <i class="fas fa-meteor"></i>
+                            <p>Dégâts</p>
+                            <progress id="degats" max="3" value="2"></progress>
+                        </div>
+                            <div class="brawlers-stat">
+                            <i class="fas fa-arrows-alt-h"></i>
+                            <p>vitesse</p>
+                        <progress id="vitesse" max="3" value="1"></progress>
+                        </div>
+                    </div>
+                </div>
+                <div class="brawlers-main-items">
+                    <div id="brawlers-liste" class="tags">
+                        <span class="tag tag-red tag-active" id="tous">Tous</span>
+                        <span class="tag tag-blue" id="rarete-1">Commun</span>
+                        <span class="tag tag-blue" id="rarete-2">Rare</span>
+                        <span class="tag tag-blue" id="rarete-3">Super rare</span>
+                        <span class="tag tag-blue" id="rarete-4">Epique</span>
+                        <span class="tag tag-blue" id="rarete-5">Mythique</span>
+                        <span class="tag tag-blue" id="rarete-6">Légendaire</span>
+                    </div>
+                    <div class="brawlers-items-grid">
+                        <img src="src/images/brawlers/arkad.png" alt="Arkad" class="rarete-1 brawler-active" style="">
+                        <img src="src/images/brawlers/bartaba.png" alt="Bartaba" class="rarete-2" style="">
+                        <img src="src/images/brawlers/bea.png" alt="Béa" class="rarete-4" style="">
+                        <img src="src/images/brawlers/billie.png" alt="Billie" class="rarete-4" style="">
+                        <img src="src/images/brawlers/bo.png" alt="Bo" class="rarete-1" style="">
+                        <img src="src/images/brawlers/brock.png" alt="Brock" class="rarete-1" style="">
+                        <img src="src/images/brawlers/bull.png" alt="Bull" class="rarete-1" style="">
+                        <img src="src/images/brawlers/carl.png" alt="Carl" class="rarete-3" style="">
+                        <img src="src/images/brawlers/colt.png" alt="Colt" class="rarete-1" style="">
+                        <img src="src/images/brawlers/corbac.png" alt="Corbac" class="rarete-6" style="">
+                        <img src="src/images/brawlers/darryl.png" alt="Darryl" class="rarete-3" style="">
+                        <img src="src/images/brawlers/djinn.png" alt="Djinn" class="rarete-5" style="">
+                        <img src="src/images/brawlers/dynamike.png" alt="Dynamike" class="rarete-1" style="">
+                        <img src="src/images/brawlers/el-costo.png" alt="El Costo" class="rarete-2" style="">
+                        <img src="src/images/brawlers/eliza.png" alt="Eliza" class="rarete-1" style="">
+                        <img src="src/images/brawlers/emeri.png" alt="Emeri" class="rarete-6" style="">
+                        <img src="src/images/brawlers/frank.png" alt="Frank" class="rarete-4" style="">
+                        <img src="src/images/brawlers/jessie.png" alt="Jessie" class="rarete-1" style="">
+                        <img src="src/images/brawlers/leon.png" alt="Leon" class="rarete-6" style="">
+                        <img src="src/images/brawlers/mortis.png" alt="Mortis" class="rarete-5" style="">
+                        <img src="src/images/brawlers/nita.png" alt="Nita" class="rarete-1" style="">
+                        <img src="src/images/brawlers/pam.png" alt="Pam" class="rarete-4" style="">
+                        <img src="src/images/brawlers/penny.png" alt="Penny" class="rarete-3" style="">
+                        <img src="src/images/brawlers/poco.png" alt="Poco" class="rarete-2" style="">
+                        <img src="src/images/brawlers/polly.png" alt="Polly" class="rarete-4" style="">
+                        <img src="src/images/brawlers/ricochet.png" alt="Ricochet" class="rarete-3" style="">
+                        <img src="src/images/brawlers/rosa.png" alt="Rosa" class="rarete-2" style="">
+                        <img src="src/images/brawlers/shelly.png" alt="Shelly" class="rarete-1" style="">
+                        <img src="src/images/brawlers/spike.png" alt="Spike" class="rarete-6" style="">
+                        <img src="src/images/brawlers/tara.png" alt="Tara" class="rarete-5" style="">
+                        <img src="src/images/brawlers/tick.png" alt="Tick" class="rarete-1" style="">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Site fait avec amour © 2020 | <a href="#">Contact</a>  <a href="#">CGU</a></p>
+        </footer>
+        <script
+        src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+        <script src="src/js/script.js"></script>
+    </body>
+</html>
